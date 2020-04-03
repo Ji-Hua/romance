@@ -1,1 +1,1 @@
-web: streamlit run app.py
+web: pipenv run streamlit run app.py
