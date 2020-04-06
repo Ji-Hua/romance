@@ -24,14 +24,18 @@ stopwords = []
 with open(stopword_file) as f:
     stopword_text = f.read()
     stopwords = stopword_text.split('\n')
+    del stopword_text
 
 font_path = d + '/fonts/NotoSansSC-Light.otf'
 
 with open('message.js') as f:
-    text = f.read()
+    msg_text = f.read()
 cleaned_text = text[11:] # remove variable declaration
 msg_json = json.loads(cleaned_text)
 messages = msg_json['message']
+del msg_text
+del cleaned_text
+del msg_json
 
 def get_text(role):
     text_chat = []
