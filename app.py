@@ -30,7 +30,7 @@ font_path = d + '/fonts/NotoSansSC-Light.otf'
 
 with open('message.js') as f:
     msg_text = f.read()
-cleaned_text = text[11:] # remove variable declaration
+cleaned_text = msg_text[11:] # remove variable declaration
 msg_json = json.loads(cleaned_text)
 messages = msg_json['message']
 del msg_text
